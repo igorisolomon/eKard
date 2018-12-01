@@ -40,6 +40,7 @@ router.post('/insert', function (req, res, next) {
   userData.save()
    .then(item => {
      res.send("User saved to database");
+     console.log('saved to db');
    })
    .catch(err => {
      res.status(400).send("Unable to save to database");
